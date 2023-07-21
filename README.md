@@ -27,8 +27,8 @@ ENTRYPOINT ["java", "-jar", "app.jar"]
 
 
 ### 2. properties 의 데이터베이스 경로를 제대로 설정했는지 확인해보자.
- **필자는 아래와 같은 경로로 지정해줬다.**  
- url: jdbc:mysql://10.0.2.6:3306/mission 
+> **필자는 아래와 같은 경로로 지정해줬다.**  
+> url: jdbc:mysql://10.0.2.6:3306/mission 
 
 ### 3. gradlew clean과 build를 절차적으로 수행하여  .jar파일을 생성한다.
 
