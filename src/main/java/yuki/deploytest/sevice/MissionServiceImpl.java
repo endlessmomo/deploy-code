@@ -1,15 +1,19 @@
 package yuki.deploytest.sevice;
 
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 import yuki.deploytest.dto.response.MissionResponseDto;
 import yuki.deploytest.entity.Student;
 import yuki.deploytest.repository.MissionRepository;
 
+import java.util.List;
 import java.util.NoSuchElementException;
+import java.util.stream.Collectors;
 
 
+@Slf4j
 @Service
 @RequiredArgsConstructor
 public class MissionServiceImpl implements MissionService {
@@ -22,5 +26,16 @@ public class MissionServiceImpl implements MissionService {
                 .findByStudentNumber(studentNumber)
                 .map(student -> modelMapper.map(student, MissionResponseDto.class))
                 .orElseThrow(() -> new NoSuchElementException("해당 학생은 존재하지 않습니다."));
+    }
+
+    @Override
+    public List<MissionResponseDto> findAll() {
+        List<Student> all = missionRepository.findAll();
+
+        all.forEach(i -> log.info("student = {}", i.toString()));
+
+        return all.stream()
+                .map(student -> modelMapper.map(student, MissionResponseDto.class))
+                .collect(Collectors.toList());
     }
 }

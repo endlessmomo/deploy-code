@@ -14,6 +14,6 @@ public class ExceptionController {
     @ResponseStatus(HttpStatus.BAD_REQUEST)
     @ExceptionHandler(NoSuchElementException.class)
     public ResponseEntity<?> handledExceptionNoSuchElement(final NoSuchElementException e) {
-        return ResponseEntity.badRequest().body("해당 데이터는 존재하지 않습니다.");
+        return ResponseEntity.badRequest().body(e.getMessage());
     }
 }
