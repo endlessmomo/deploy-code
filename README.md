@@ -4,6 +4,7 @@
 | GET | mission/api/search/{studentNmber}         | 학생들의 학번을 통해 학생 정보 조회 |
 | GET | mission/api/searchAll         | 교육장 내 수강생 모두의 정보 조회           | 
 
+<br><br>
 ## 💻배포 과정
 
 ---
