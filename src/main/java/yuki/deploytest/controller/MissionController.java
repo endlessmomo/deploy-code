@@ -21,13 +21,13 @@ public class MissionController {
 
     private final MissionService missionServiceImpl;
 
-    @GetMapping("/{studentNumber}")
-    public ResponseEntity<MissionResponseDto> getStudentInfo(@PathVariable String studentNumber) {
+    @GetMapping("/search/{studentNumber}")
+    public ResponseEntity<MissionResponseDto> search(@PathVariable String studentNumber) {
         return ResponseEntity.ok(missionServiceImpl.selectStudentInfo(studentNumber));
     }
 
-    @GetMapping("/findAll")
-    public ResponseEntity<Map<String, Object>> findAll(){
+    @GetMapping("/searchAll")
+    public ResponseEntity<Map<String, Object>> searchAll() {
         Map<String, Object> data = new HashMap<>();
         data.put("student", missionServiceImpl.findAll());
 

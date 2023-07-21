@@ -9,6 +9,7 @@ import yuki.deploytest.entity.Student;
 @NoArgsConstructor
 @AllArgsConstructor
 public class MissionResponseDto {
+
     private String studentName;
     private String studentNumber;
     private String email;

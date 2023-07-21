@@ -14,6 +14,7 @@ import javax.validation.constraints.NotBlank;
 @ToString
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class Student {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;

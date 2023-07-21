@@ -20,6 +20,7 @@ public class MissionServiceImpl implements MissionService {
 
     private final MissionRepository missionRepository;
     private final ModelMapper modelMapper;
+
     @Override
     public MissionResponseDto selectStudentInfo(String studentNumber) {
         return missionRepository
@@ -35,7 +36,7 @@ public class MissionServiceImpl implements MissionService {
         all.forEach(i -> log.info("student = {}", i.toString()));
 
         return all.stream()
-                .map(student -> modelMapper.map(student, MissionResponseDto.class))
+                .map(MissionResponseDto::of)
                 .collect(Collectors.toList());
     }
 }

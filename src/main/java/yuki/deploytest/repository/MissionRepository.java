@@ -11,5 +11,6 @@ import java.util.Optional;
 public interface MissionRepository extends JpaRepository<Student, Long> {
 
     Optional<Student> findByStudentNumber(String studentNumber);
+
     List<Student> findAll();
 }
