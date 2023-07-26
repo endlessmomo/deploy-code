@@ -37,9 +37,9 @@ tasks.named('test') {
     useJUnitPlatform()
 }
 
-tasks.register('copyPrivate', Copy) {
+task copyPrivate(type: Copy) {
     copy {
-        from './submodule-data'
+        from './deploy-code-data'
         include "*.yml"
         into 'src/main/resources'
     }
