@@ -1,4 +1,4 @@
-package yuki.deploytest.entity;
+package yuki.deploytest.persist.entity;
 
 import lombok.*;
 

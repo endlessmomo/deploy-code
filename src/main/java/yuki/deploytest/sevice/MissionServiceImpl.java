@@ -5,8 +5,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 import yuki.deploytest.dto.response.MissionResponseDto;
-import yuki.deploytest.entity.Student;
-import yuki.deploytest.repository.MissionRepository;
+import yuki.deploytest.persist.entity.Student;
+import yuki.deploytest.persist.repository.MissionRepository;
 
 import java.util.List;
 import java.util.NoSuchElementException;

@@ -1,7 +1,7 @@
 package yuki.deploytest.dto.response;
 
 import lombok.*;
-import yuki.deploytest.entity.Student;
+import yuki.deploytest.persist.entity.Student;
 
 @Getter
 @Setter
